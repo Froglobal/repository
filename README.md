@@ -1,2 +1,0 @@
-# repository
-カメラの向き
