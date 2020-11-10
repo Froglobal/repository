@@ -1,5 +1,5 @@
 //このコードは「アバター操作 (ThirdPersonUserControl)」と一緒に使用してください
-//同じアバターのオブジェクト(又はプレハブ)に、このコードと「アバター操作 (ThirdPersonUserControl)」の二つをInspectorに加えて下さい。
+//アバターのオブジェクト(又はプレハブ)に、このコードと「アバター操作 (ThirdPersonUserControl)」の二つをInspectorに加えて下さい。
 //単体だと動きません。
 using UnityEngine;
 
