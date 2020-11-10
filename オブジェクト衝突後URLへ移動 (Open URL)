@@ -1,0 +1,30 @@
+//このコードは、アバターが接触するオブジェクトのInspectorに加えます。
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class OpenURL : MonoBehaviour
+{
+    // Start is called before the first frame update
+    //ifで"Player"が使われていることから、アバターの名前(接触しに行く側のオブジェクト名)をPlayerにしないと動きません。(12行目)
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+                Application.OpenURL("https://www.neec.ac.jp/");
+                Debug.Log("衝突したオブジェクト：" + collision.gameObject.name);
+                Debug.Log("衝突されたオブジェクト：" + gameObject.name);
+
+            StartCoroutine("Timer");
+
+        }
+    }
+
+    IEnumerator Timer()
+    {
+        Debug.Log("3秒待ちます。");
+        //3秒待つ
+        yield return new WaitForSeconds(10);
+        Debug.Log("3秒待ちました。");
+    }
+}
